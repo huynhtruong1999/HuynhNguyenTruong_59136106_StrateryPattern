@@ -9,6 +9,17 @@ package bai3;
  *
  * @author ASUS
  */
-public class SoSanhTheoTen {
-    
+public class SoSanhTheoTen implements ISoSanh<SinhVien> {
+
+    @Override
+    public int soSanh(SinhVien o1, SinhVien o2) {
+        int sS = o1.getHoTen().compareTo(o2.getHoTen());
+        if (sS > 0) {
+            return 1;
+        }
+        if (sS > 0) {
+            return -1;
+        }
+        return 0;
+    }
 }

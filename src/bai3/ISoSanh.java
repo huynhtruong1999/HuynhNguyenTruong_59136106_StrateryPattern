@@ -9,6 +9,7 @@ package bai3;
  *
  * @author ASUS
  */
-public class ISoSanh {
-    
+public interface ISoSanh<T> {
+
+    public int soSanh(T o1, T o2);
 }
