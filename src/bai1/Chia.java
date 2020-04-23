@@ -9,6 +9,13 @@ package bai1;
  *
  * @author ASUS
  */
-public class Chia {
-    
+public class Chia implements ITinh {
+
+    @Override
+    public float tinh(float a, float b) {
+        if (b != 0) {
+            return a / b;
+        } 
+    }
+
 }

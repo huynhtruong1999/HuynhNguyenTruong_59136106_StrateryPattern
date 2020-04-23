@@ -9,6 +9,6 @@ package bai1;
  *
  * @author ASUS
  */
-public class Tinh {
-    
+public interface ITinh {
+    public float tinh(float a, float b);
 }

@@ -15,10 +15,10 @@ public class Main1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Context context = new Context();
-        context.setTinhToan(new Cong());
-        System.out.println(context.tinh(75, 12));
-        context.setTinhToan(new Tru());
-        System.out.println(context.tinh(54, 78));
+        Context ct = new Context();
+        ct.setTinhToan(new Cong());
+        System.out.println(ct.tinh(75, 12));
+        ct.setTinhToan(new Tru());
+        System.out.println(ct.tinh(54, 78));
     }
 }
