@@ -21,15 +21,23 @@ public class GioHang {
     public ArrayList<HangHoa> getDsHangHoa() {
         return dsHangHoa;
     }
-    public double thanhToan() {
-        int tong = 0;
-        for (int i = 0; i < dsHangHoa.size(); i++) {
-            tong += dsHangHoa.get(i).getGia();
-        }
-        return hinhthucTT.thanhToan(tongTienHang);
-    }
-
+    
     public void them(HangHoa hangHoa) {
         dsHangHoa.add(hangHoa);
     }
+    
+    public int tongTienHang(){
+    int tong = 0;
+    for (int i = 0; i < dsHangHoa.size(); i++) {
+            tong += dsHangHoa.get(i).getGia();
+        }
+    return tong;
+    }
+        
+    public double thanhToan() {
+        return hinhthucTT.thanhToan(tongTienHang());
+    }
+
+
+
 }

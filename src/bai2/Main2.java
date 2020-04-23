@@ -15,26 +15,22 @@ public class Main2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    ThanhToanOnline thanhToanOnline = new ThanhToanOnline();
-        ThanhToanCOD thanhToanCOD = new ThanhToanCOD();
-
-        HangHoa hh1 = new HangHoa("Dien thoai ViVo", 2100000, "Version Y91C");
-        HangHoa hh2 = new HangHoa("Chuot Gaming", 200000, "T-Wolf");
-
-        System.out.println("Danh sach mat hang thanh toan online:\n");
+        HangHoa hh1 = new HangHoa("Sách Tiếng Anh 12", 300000, "Học giỏi anh văn");
+        HangHoa hh2 = new HangHoa("Sách Toán 12", 250000, "Học giỏi toán");
         GioHang gh1 = new GioHang();
-        gh1.setHinhthucTT(thanhToanOnline);
+        gh1.setHinhthucTT(new ThanhToanOnline());
         gh1.them(hh1);
         gh1.them(hh2);
-        gh1.inDS();
-        System.out.println("Thanh toan online:" + gh1.thanhToan());
 
-        System.out.println("\nDanh sach mat hang thanh toan COD:\n");
-        GioHang gh2 = new GioHang();
-        gh2.setHinhthucTT(thanhToanCOD);
-        gh2.them(hh1);
-        gh2.them(hh2);
-        gh2.inDS();
-        System.out.println("Thanh toan COD:" + gh2.thanhToan());
-    }    
-}
+        
+        ArrayList<HangHoa> dsHangHoa1 = gh1.getDsHangHoa();
+        System.out.println("Danh sách hàng trong giỏ");
+        dsHangHoa1.forEach((hangHoa) -> {
+            System.out.println("Hàng hóa: " + hangHoa.thongTin());
+        });
+        System.out.println("Tổng tiền hàng: " + gh1.tongTienHang());
+        System.out.println("Tổng tiền phải thanh toán: " + gh1.thanhToan());
+        
+        System.out.println("");
+    }
+}    
