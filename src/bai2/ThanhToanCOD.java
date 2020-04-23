@@ -9,6 +9,14 @@ package bai2;
  *
  * @author ASUS
  */
-public class ThanhToanCOD {
-    
+public class ThanhToanCOD implements IThanhToan {
+
+    @Override
+    public double thanhToan(int tienHang) {
+        if (tienHang > 2000000) {
+            return tienHang * 0.98;
+        }
+        return tienHang;
+    }
+
 }

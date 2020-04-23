@@ -9,6 +9,7 @@ package bai2;
  *
  * @author ASUS
  */
-public class IThanhToan {
-    
+public interface IThanhToan {
+
+    public double thanhToan(int tienHang);
 }
